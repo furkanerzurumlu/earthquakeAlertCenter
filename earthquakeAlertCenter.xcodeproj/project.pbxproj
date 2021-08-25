@@ -13,6 +13,11 @@
 		DC0F114E26D4029D003B6303 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0F114C26D4029D003B6303 /* Main.storyboard */; };
 		DC0F115026D4029E003B6303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC0F114F26D4029E003B6303 /* Assets.xcassets */; };
 		DC0F115326D4029E003B6303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC0F115126D4029E003B6303 /* LaunchScreen.storyboard */; };
+		DC4C066726D6BD2D00BCA56C /* Earthquake.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C066626D6BD2D00BCA56C /* Earthquake.swift */; };
+		DC4C066A26D6BDAF00BCA56C /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4C066826D6BDAF00BCA56C /* customCell.swift */; };
+		DC4C066B26D6BDAF00BCA56C /* customCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC4C066926D6BDAF00BCA56C /* customCell.xib */; };
+		DC69E70E26D65080009C83FB /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC69E70D26D65080009C83FB /* Webservice.swift */; };
+		DC69E71126D650E5009C83FB /* EarthquakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC69E71026D650E5009C83FB /* EarthquakeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		DC0F114F26D4029E003B6303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DC0F115226D4029E003B6303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DC0F115426D4029E003B6303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC4C066626D6BD2D00BCA56C /* Earthquake.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Earthquake.swift; sourceTree = "<group>"; };
+		DC4C066826D6BDAF00BCA56C /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
+		DC4C066926D6BDAF00BCA56C /* customCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customCell.xib; sourceTree = "<group>"; };
+		DC69E70D26D65080009C83FB /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		DC69E71026D650E5009C83FB /* EarthquakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +66,52 @@
 		DC0F114526D4029D003B6303 /* earthquakeAlertCenter */ = {
 			isa = PBXGroup;
 			children = (
+				DC69E71226D650F8009C83FB /* Model */,
+				DC69E70C26D6505B009C83FB /* Service */,
+				DC69E70F26D6508B009C83FB /* ViewModel */,
+				DC69E70B26D65027009C83FB /* View */,
+				DC0F114C26D4029D003B6303 /* Main.storyboard */,
 				DC0F114626D4029D003B6303 /* AppDelegate.swift */,
 				DC0F114826D4029D003B6303 /* SceneDelegate.swift */,
-				DC0F114A26D4029D003B6303 /* ViewController.swift */,
-				DC0F114C26D4029D003B6303 /* Main.storyboard */,
 				DC0F114F26D4029E003B6303 /* Assets.xcassets */,
 				DC0F115126D4029E003B6303 /* LaunchScreen.storyboard */,
 				DC0F115426D4029E003B6303 /* Info.plist */,
 			);
 			path = earthquakeAlertCenter;
+			sourceTree = "<group>";
+		};
+		DC69E70B26D65027009C83FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DC0F114A26D4029D003B6303 /* ViewController.swift */,
+				DC4C066826D6BDAF00BCA56C /* customCell.swift */,
+				DC4C066926D6BDAF00BCA56C /* customCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		DC69E70C26D6505B009C83FB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DC69E70D26D65080009C83FB /* Webservice.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		DC69E70F26D6508B009C83FB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DC69E71026D650E5009C83FB /* EarthquakeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		DC69E71226D650F8009C83FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DC4C066626D6BD2D00BCA56C /* Earthquake.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,6 +173,7 @@
 			files = (
 				DC0F115326D4029E003B6303 /* LaunchScreen.storyboard in Resources */,
 				DC0F115026D4029E003B6303 /* Assets.xcassets in Resources */,
+				DC4C066B26D6BDAF00BCA56C /* customCell.xib in Resources */,
 				DC0F114E26D4029D003B6303 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +187,10 @@
 			files = (
 				DC0F114B26D4029D003B6303 /* ViewController.swift in Sources */,
 				DC0F114726D4029D003B6303 /* AppDelegate.swift in Sources */,
+				DC4C066A26D6BDAF00BCA56C /* customCell.swift in Sources */,
+				DC69E70E26D65080009C83FB /* Webservice.swift in Sources */,
+				DC69E71126D650E5009C83FB /* EarthquakeViewModel.swift in Sources */,
+				DC4C066726D6BD2D00BCA56C /* Earthquake.swift in Sources */,
 				DC0F114926D4029D003B6303 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
