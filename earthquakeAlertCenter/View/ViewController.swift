@@ -7,18 +7,26 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
+    
     
     @IBOutlet weak var sideMenuView: UIView!
-    var sideMenu = false
-    var earthqueakeViewModel : earthquakeVM!
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
     
-
+    var sideMenu = false
+    var eartquake : Earthquake?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(customCell.nibName, forCellReuseIdentifier: customCell.identifier)
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.backgroundColor = UIColor.red
         navigationItem.title = "Son Depremler"
         self.navigationController?.navigationBar.barTintColor = UIColor.red
+
         
     }
     
@@ -44,5 +52,19 @@ class ViewController: UIViewController {
     }
         sideMenu = !sideMenu
 }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 31
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell  = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! customCell
+        return cell
+        
+        
+    }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

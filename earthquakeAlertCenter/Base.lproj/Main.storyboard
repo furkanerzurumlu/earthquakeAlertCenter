@@ -24,7 +24,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WLm-if-HCO">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -37,7 +37,7 @@
                             <constraint firstItem="MP0-sp-x35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-240" id="NeR-xK-GjA"/>
                             <constraint firstItem="MP0-sp-x35" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UJ9-1v-6bD"/>
                             <constraint firstItem="MP0-sp-x35" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="tHk-cn-7uS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WLm-if-HCO" secondAttribute="bottom" id="xBy-Bc-jzt"/>
+                            <constraint firstAttribute="bottom" secondItem="WLm-if-HCO" secondAttribute="bottom" id="xBy-Bc-jzt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Dr-e5-mBd">
@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="leadingConst" destination="NeR-xK-GjA" id="mdA-pq-alQ"/>
                         <outlet property="sideMenuView" destination="MP0-sp-x35" id="c2Q-HM-n0k"/>
+                        <outlet property="tableView" destination="WLm-if-HCO" id="bJ7-3O-1ZO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -66,6 +67,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ch-cI-B3P">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Ty-N7-5aL"/>
                     </connections>
