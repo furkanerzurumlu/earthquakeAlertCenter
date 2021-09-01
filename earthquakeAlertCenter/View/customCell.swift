@@ -15,6 +15,7 @@ class customCell: UITableViewCell {
     @IBOutlet weak var degreeView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         topView.layer.cornerRadius = 10
         degreeView.layer.cornerRadius = degreeView.bounds.width / 2
         
@@ -23,12 +24,9 @@ class customCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
+
     }
-    func asd()
-    {
-        nameText.text = "dasdasdasd"
-    }
+
 }
 
 extension customCell {

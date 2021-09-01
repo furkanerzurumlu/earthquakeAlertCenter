@@ -23,11 +23,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         tableView.delegate = self
         tableView.dataSource = self
-        self.tableView.backgroundColor = UIColor.red
-        navigationItem.title = "Son Depremler"
-        self.navigationController?.navigationBar.barTintColor = UIColor.red
-
         
+       
+        navigationItem.title = "Son Depremler"
+        self.tableView.backgroundColor = UIColor.red
+        
+        self.navigationController?.navigationBar.barTintColor = UIColor.red
+      
     }
     
     @IBAction func sideMenu(_ sender: Any) {

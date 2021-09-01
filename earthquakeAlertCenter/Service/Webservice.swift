@@ -7,7 +7,10 @@
 
 import Foundation
 
+
 class WebService {
     
-  
+    func downloadCurrenies(url : URL, completion : @escaping (Earthquake?) -> Void){
+        URLSession.shared.dataTask(with: url)
+    }
 }
