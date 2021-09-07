@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
@@ -15,21 +16,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     
     var sideMenu = false
-    var eartquake : Earthquake?
+    var viewModel = AlamofireWebservice()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.reloadData = {
+            self.tableView.reloadData()
+        }
+        viewModel.fetch()
         tableView.register(customCell.nibName, forCellReuseIdentifier: customCell.identifier)
         
         tableView.delegate = self
         tableView.dataSource = self
         
-       
         navigationItem.title = "Son Depremler"
         self.tableView.backgroundColor = UIColor.red
         
         self.navigationController?.navigationBar.barTintColor = UIColor.red
       
+        
     }
     
     @IBAction func sideMenu(_ sender: Any) {
@@ -56,7 +62,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 31
+        return viewModel.response?.data.count ?? 0
+        //return viewModel.datum?.count ?? 0
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

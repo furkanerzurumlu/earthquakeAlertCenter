@@ -18,3 +18,11 @@ struct Datum : Decodable {
     let md, ml, mw, place : String
     let status : String
 }
+
+/*extension Earthquake: Displayable{
+    
+    var item1: (label: String, value : String){
+        ("date", Earthquake.init(success: true, data: data))
+    }
+}
+*/
