@@ -13,15 +13,7 @@ class AlamofireWebservice {
     var datum : [Datum]?
     var reloadData: (() -> ())?
     
-  func fetchEarthquake() {
-    let request = AF.request("https://apps.furkansandal.com/st/intern/")
-    request.responseJSON { (data) in
-        print(data)
-    }
-    
-  }
-
-    func fetch() {
+    func fetchEarthquake() {
         AF.request("https://apps.furkansandal.com/st/intern/")
             .validate()
             .responseDecodable(of: Earthquake.self) { (result) in

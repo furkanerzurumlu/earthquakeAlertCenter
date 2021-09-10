@@ -10,10 +10,12 @@ import Alamofire
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
-    
+    private lazy var mainData : [Datum] = viewModel.response!.data
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
+    
+    
     
     var sideMenu = false
     var viewModel = AlamofireWebservice()
@@ -24,7 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         viewModel.reloadData = {
             self.tableView.reloadData()
         }
-        viewModel.fetch()
+        
+        viewModel.fetchEarthquake()
         tableView.register(customCell.nibName, forCellReuseIdentifier: customCell.identifier)
         
         tableView.delegate = self
@@ -35,6 +38,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.navigationController?.navigationBar.barTintColor = UIColor.red
       
+        
         
     }
     
@@ -69,6 +73,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! customCell
+        
+        
+        cell.conf(detail: mainData[indexPath.row])
         return cell
         
         
