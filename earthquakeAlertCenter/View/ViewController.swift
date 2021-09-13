@@ -38,8 +38,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         self.navigationController?.navigationBar.barTintColor = UIColor.red
       
-        
-        
     }
     
     @IBAction func sideMenu(_ sender: Any) {
@@ -73,12 +71,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: customCell.identifier, for: indexPath) as! customCell
-        
-        
         cell.conf(detail: mainData[indexPath.row])
         return cell
-        
-        
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
