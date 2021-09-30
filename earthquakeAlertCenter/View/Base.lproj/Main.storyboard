@@ -67,19 +67,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Y9-8v-bG8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="503"/>
                             </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-78-ip9" customClass="detailView" customModule="earthquakeAlertCenter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="588" width="414" height="274"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="nNG-M9-eUw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="nC5-VK-wlb"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
                             <constraint firstItem="9Y9-8v-bG8" firstAttribute="leading" secondItem="nC5-VK-wlb" secondAttribute="leading" id="FRr-fI-Ar6"/>
-                            <constraint firstItem="nC5-VK-wlb" firstAttribute="bottom" secondItem="9Y9-8v-bG8" secondAttribute="bottom" id="UCW-JD-YOf"/>
+                            <constraint firstItem="nC5-VK-wlb" firstAttribute="bottom" secondItem="9Y9-8v-bG8" secondAttribute="bottom" constant="271" id="UCW-JD-YOf"/>
+                            <constraint firstItem="nC5-VK-wlb" firstAttribute="bottom" secondItem="IM4-78-ip9" secondAttribute="bottom" id="bqv-Xb-Hln"/>
                             <constraint firstItem="9Y9-8v-bG8" firstAttribute="top" secondItem="nC5-VK-wlb" secondAttribute="top" id="uS7-uj-C0e"/>
+                            <constraint firstItem="IM4-78-ip9" firstAttribute="leading" secondItem="nC5-VK-wlb" secondAttribute="leading" id="x7i-d0-laD"/>
+                            <constraint firstItem="nC5-VK-wlb" firstAttribute="trailing" secondItem="IM4-78-ip9" secondAttribute="trailing" id="yUl-Xc-dt9"/>
                             <constraint firstItem="nC5-VK-wlb" firstAttribute="trailing" secondItem="9Y9-8v-bG8" secondAttribute="trailing" id="zBR-Vd-AVm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="PN8-e0-aTZ"/>
+                    <connections>
+                        <outlet property="detailView" destination="IM4-78-ip9" id="Zcq-KC-NLL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCP-ub-oJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

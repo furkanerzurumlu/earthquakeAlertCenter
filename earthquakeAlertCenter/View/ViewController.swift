@@ -87,6 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }*/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "detailSegue", sender: self)
+        //self.navigationController?.pushViewController(DetailVC, animated: true)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detailVC = segue.destination as! DetailVC
