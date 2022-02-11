@@ -16,26 +16,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MP0-sp-x35">
-                                <rect key="frame" x="-240" y="88" width="240" height="808"/>
-                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="g3j-dh-Wr1"/>
-                                </constraints>
-                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="WLm-if-HCO">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="QiJ-XQ-K6F">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MP0-sp-x35">
+                                <rect key="frame" x="-240" y="88" width="240" height="808"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="noL-lW-HXL">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="808"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                <constraints>
+                                    <constraint firstItem="noL-lW-HXL" firstAttribute="top" secondItem="MP0-sp-x35" secondAttribute="top" id="9l2-QZ-5Ol"/>
+                                    <constraint firstAttribute="trailing" secondItem="noL-lW-HXL" secondAttribute="trailing" id="cFx-lG-dSw"/>
+                                    <constraint firstItem="noL-lW-HXL" firstAttribute="leading" secondItem="MP0-sp-x35" secondAttribute="leading" id="sbG-kA-J9j"/>
+                                    <constraint firstAttribute="bottom" secondItem="noL-lW-HXL" secondAttribute="bottom" id="uHG-Yu-DGl"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WLm-if-HCO" secondAttribute="trailing" id="2aV-wB-H3Y"/>
-                            <constraint firstItem="WLm-if-HCO" firstAttribute="leading" secondItem="MP0-sp-x35" secondAttribute="trailing" id="6fM-hQ-Bso"/>
                             <constraint firstItem="WLm-if-HCO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6oZ-bA-nvo"/>
+                            <constraint firstItem="MP0-sp-x35" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="Fn6-9F-veZ"/>
                             <constraint firstItem="MP0-sp-x35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="-240" id="NeR-xK-GjA"/>
                             <constraint firstItem="MP0-sp-x35" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UJ9-1v-6bD"/>
+                            <constraint firstItem="WLm-if-HCO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="l56-si-e8d"/>
                             <constraint firstItem="MP0-sp-x35" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="tHk-cn-7uS"/>
                             <constraint firstAttribute="bottom" secondItem="WLm-if-HCO" secondAttribute="bottom" id="xBy-Bc-jzt"/>
                         </constraints>
@@ -49,6 +64,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="leadingConst" destination="NeR-xK-GjA" id="mdA-pq-alQ"/>
+                        <outlet property="menuTableView" destination="noL-lW-HXL" id="D5g-7q-aEA"/>
+                        <outlet property="searchBar" destination="QiJ-XQ-K6F" id="msY-4N-u09"/>
                         <outlet property="sideMenuView" destination="MP0-sp-x35" id="c2Q-HM-n0k"/>
                         <outlet property="tableView" destination="WLm-if-HCO" id="bJ7-3O-1ZO"/>
                         <segue destination="B0D-wI-5tv" kind="show" identifier="detailSegue" id="zZh-9S-T9D"/>
@@ -56,7 +73,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1031.8840579710145" y="118.52678571428571"/>
+            <point key="canvasLocation" x="1036" y="119"/>
         </scene>
         <!--DetailVC-->
         <scene sceneID="pBQ-0S-N9Q">
@@ -67,10 +84,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9Y9-8v-bG8">
-                                <rect key="frame" x="0.0" y="88" width="414" height="503"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="534"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IM4-78-ip9" customClass="detailView" customModule="earthquakeAlertCenter" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="588" width="414" height="274"/>
+                                <rect key="frame" x="0.0" y="622" width="414" height="274"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="274" id="nNG-M9-eUw"/>
@@ -80,9 +97,9 @@
                         <viewLayoutGuide key="safeArea" id="nC5-VK-wlb"/>
                         <color key="backgroundColor" systemColor="systemPinkColor"/>
                         <constraints>
+                            <constraint firstItem="IM4-78-ip9" firstAttribute="top" secondItem="9Y9-8v-bG8" secondAttribute="bottom" id="BCX-TP-6pU"/>
                             <constraint firstItem="9Y9-8v-bG8" firstAttribute="leading" secondItem="nC5-VK-wlb" secondAttribute="leading" id="FRr-fI-Ar6"/>
-                            <constraint firstItem="nC5-VK-wlb" firstAttribute="bottom" secondItem="9Y9-8v-bG8" secondAttribute="bottom" constant="271" id="UCW-JD-YOf"/>
-                            <constraint firstItem="nC5-VK-wlb" firstAttribute="bottom" secondItem="IM4-78-ip9" secondAttribute="bottom" id="bqv-Xb-Hln"/>
+                            <constraint firstAttribute="bottom" secondItem="IM4-78-ip9" secondAttribute="bottom" id="bqv-Xb-Hln"/>
                             <constraint firstItem="9Y9-8v-bG8" firstAttribute="top" secondItem="nC5-VK-wlb" secondAttribute="top" id="uS7-uj-C0e"/>
                             <constraint firstItem="IM4-78-ip9" firstAttribute="leading" secondItem="nC5-VK-wlb" secondAttribute="leading" id="x7i-d0-laD"/>
                             <constraint firstItem="nC5-VK-wlb" firstAttribute="trailing" secondItem="IM4-78-ip9" secondAttribute="trailing" id="yUl-Xc-dt9"/>
@@ -92,11 +109,28 @@
                     <navigationItem key="navigationItem" id="PN8-e0-aTZ"/>
                     <connections>
                         <outlet property="detailView" destination="IM4-78-ip9" id="Zcq-KC-NLL"/>
+                        <outlet property="mapView" destination="9Y9-8v-bG8" id="4Ey-xR-TWs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FCP-ub-oJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1905.7971014492755" y="118.52678571428571"/>
+        </scene>
+        <!--Developer Vc-->
+        <scene sceneID="OiM-oo-UaI">
+            <objects>
+                <viewController id="dUa-6B-IbV" customClass="DeveloperVc" customModule="earthquakeAlertCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fWQ-z0-DH0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="POI-k5-xLB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="t5g-WQ-prP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="srk-ZC-HdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="846"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m9t-LY-oJ3">
@@ -127,6 +161,9 @@
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
