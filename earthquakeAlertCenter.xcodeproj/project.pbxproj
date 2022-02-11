@@ -21,7 +21,6 @@
 		DC69E70E26D65080009C83FB /* AlamofireWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC69E70D26D65080009C83FB /* AlamofireWebservice.swift */; };
 		DC69E71126D650E5009C83FB /* EarthquakeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC69E71026D650E5009C83FB /* EarthquakeViewModel.swift */; };
 		DC8A961A2735DC3500DAF395 /* DeveloperVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A96192735DC3500DAF395 /* DeveloperVc.swift */; };
-		DC8A961C2739494100DAF395 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8A961B2739494100DAF395 /* UIViewController+Extension.swift */; };
 		DC8EA0032703ABD4002CCA86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8EA0022703ABD4002CCA86 /* BaseView.swift */; };
 		DC8EA0052714BC01002CCA86 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8EA0042714BC01002CCA86 /* HomeVM.swift */; };
 		DC8EA0082714C250002CCA86 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8EA0072714C250002CCA86 /* CALayer+Extension.swift */; };
@@ -48,7 +47,6 @@
 		DC69E70D26D65080009C83FB /* AlamofireWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireWebservice.swift; sourceTree = "<group>"; };
 		DC69E71026D650E5009C83FB /* EarthquakeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarthquakeViewModel.swift; sourceTree = "<group>"; };
 		DC8A96192735DC3500DAF395 /* DeveloperVc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeveloperVc.swift; path = ../../DeveloperVc.swift; sourceTree = "<group>"; };
-		DC8A961B2739494100DAF395 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIViewController+Extension.swift"; path = "../../../../Downloads/UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DC8EA0022703ABD4002CCA86 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		DC8EA0042714BC01002CCA86 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		DC8EA0072714C250002CCA86 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				DC8EA0072714C250002CCA86 /* CALayer+Extension.swift */,
-				DC8A961B2739494100DAF395 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,7 +311,6 @@
 				DC8EA0052714BC01002CCA86 /* HomeVM.swift in Sources */,
 				DCD6259526EF953C00684C3F /* detailView.swift in Sources */,
 				DC0F114726D4029D003B6303 /* AppDelegate.swift in Sources */,
-				DC8A961C2739494100DAF395 /* UIViewController+Extension.swift in Sources */,
 				DC4C066A26D6BDAF00BCA56C /* customCell.swift in Sources */,
 				DC69E70E26D65080009C83FB /* AlamofireWebservice.swift in Sources */,
 				DC1AF56926EF9F9200E64CE7 /* DetailVC.swift in Sources */,

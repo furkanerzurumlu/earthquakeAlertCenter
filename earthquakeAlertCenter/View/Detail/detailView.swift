@@ -44,8 +44,6 @@ class detailView : BaseView {
         //detailView.layer.cornerRadius = 20
         mdcolorView.layer.cornerRadius = mdcolorView.frame.width/2
         
-        
-        
     }
     
     func confDetail(detail : Datum) {

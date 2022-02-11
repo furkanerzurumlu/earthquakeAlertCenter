@@ -8,39 +8,18 @@
 import UIKit
 import Alamofire
 
-
-
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate{
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     lazy var mainData : [Datum] = webService.response!.data
     @IBOutlet weak var sideMenuView: UIView!
     @IBOutlet weak var leadingConst: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet weak var menuTableView: UITableView!
-
-    @IBOutlet weak var searchBar: UISearchBar!
-    
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var developerView: UIView!
     
     var viewModel: HomeVM = HomeVM()
     var sideMenu = false
     var webService = AlamofireWebservice()
-    
-    enum menuOptions : String , CaseIterable{
-            case home = "Son Depremler"
-            case profile = "Uygulama Geliştirici"
-            
-            var imageName : String {
-                switch self {
-                
-                case .home:
-                    return "home"
-                case .profile:
-                    return "profile"
-                }
-            }
-        }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,15 +27,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         webService.reloadData = {
             self.tableView.reloadData()
         }
-        menuTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        menuTableView.delegate = self
-        menuTableView.dataSource = self
-        menuTableView.separatorStyle = .none
-        self.menuTableView.backgroundColor = UIColor.red
-        
-        /////searchBar.searchTextField.backgroundColor = .white
-        
-
         
         webService.fetchEarthquake()
         tableView.register(customCell.nibName, forCellReuseIdentifier: customCell.identifier)
@@ -67,17 +37,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationItem.title = "Son Depremler"
         self.tableView.backgroundColor = UIColor.red
         self.navigationController?.navigationBar.barTintColor = UIColor.red
+        mainView.layer.cornerRadius = 10
+        developerView.layer.cornerRadius = 10
         
-        
- 
+        let gesture = UITapGestureRecognizer(target: self, action:  #selector(self.checkAction))
+        self.mainView.addGestureRecognizer(gesture)
+        mainView.isUserInteractionEnabled = true
     }
-   
+    @objc func checkAction(sender : UITapGestureRecognizer){
+        
+    }
     
     @IBAction func sideMenu(_ sender: Any) {
        sidemenuAction()
 }
- 
-    //////
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return webService.response?.data.count ?? 0
         //return viewModel.datum?.count ?? 0
@@ -110,16 +84,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let detailVC = segue.destination as! DetailVC
         detailVC.mainData = viewModel.sendData
     }
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        var searchBarData : [Earthquake] = []
-        
-        if searchText == ""{
-            
-        }
+    
+    
+    @IBAction func mainButton(_ sender: Any) {
+        sidemenuAction()
     }
     
-    
-   
+    @IBAction func developerButton(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "developerSegue", sender: nil)
+    }
     
     func sidemenuAction(){
         if (sideMenu){
