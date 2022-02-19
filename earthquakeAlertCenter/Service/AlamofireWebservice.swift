@@ -14,7 +14,7 @@ class AlamofireWebservice {
     var reloadData: (() -> ())?
     
     func fetchEarthquake() {
-        AF.request("https://apps.furkansandal.com/st/intern/")
+        AF.request("https://apps.furkansandal.com/st/intern/index.php")
             .validate()
             .responseDecodable(of: Earthquake.self) { (result) in
                 

@@ -209,18 +209,52 @@
         <!--Developer Vc-->
         <scene sceneID="OiM-oo-UaI">
             <objects>
-                <viewController id="dUa-6B-IbV" customClass="DeveloperVc" customModule="earthquakeAlertCenter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DeveloperVc" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dUa-6B-IbV" customClass="DeveloperVc" customModule="earthquakeAlertCenter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fWQ-z0-DH0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Ahmet Furkan ERZURUMLU          iOS Developer" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VeO-n5-xQQ">
+                                <rect key="frame" x="45" y="485" width="332" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="QT3-CB-gzQ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bfZ-ga-bUU">
+                                <rect key="frame" x="45" y="163" width="325" height="287"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpt-vF-zBX">
+                                <rect key="frame" x="147" y="623" width="120" height="120"/>
+                                <state key="normal" image="GitHub-Mark-120px-plus"/>
+                                <connections>
+                                    <action selector="github:" destination="dUa-6B-IbV" eventType="touchUpInside" id="4dK-Ho-xEO"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="POI-k5-xLB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hpt-vF-zBX" firstAttribute="leading" secondItem="POI-k5-xLB" secondAttribute="leading" constant="147" id="3OO-WE-XZC"/>
+                            <constraint firstItem="VeO-n5-xQQ" firstAttribute="top" secondItem="bfZ-ga-bUU" secondAttribute="bottom" constant="35" id="8WE-aB-55X"/>
+                            <constraint firstItem="VeO-n5-xQQ" firstAttribute="leading" secondItem="POI-k5-xLB" secondAttribute="leading" constant="45" id="Pgt-Jf-HQ1"/>
+                            <constraint firstItem="bfZ-ga-bUU" firstAttribute="leading" secondItem="POI-k5-xLB" secondAttribute="leading" constant="45" id="X8u-op-QAi"/>
+                            <constraint firstItem="bfZ-ga-bUU" firstAttribute="top" secondItem="POI-k5-xLB" secondAttribute="top" constant="75" id="XLJ-gQ-M4t"/>
+                            <constraint firstItem="POI-k5-xLB" firstAttribute="trailing" secondItem="VeO-n5-xQQ" secondAttribute="trailing" constant="37" id="e2U-Eo-gdp"/>
+                            <constraint firstItem="POI-k5-xLB" firstAttribute="bottom" secondItem="Hpt-vF-zBX" secondAttribute="bottom" constant="119" id="uGL-PS-DjS"/>
+                            <constraint firstItem="Hpt-vF-zBX" firstAttribute="top" secondItem="VeO-n5-xQQ" secondAttribute="bottom" constant="10" id="uwR-cT-0Jt"/>
+                            <constraint firstItem="POI-k5-xLB" firstAttribute="trailing" secondItem="Hpt-vF-zBX" secondAttribute="trailing" constant="147" id="wwv-1f-9th"/>
+                            <constraint firstItem="POI-k5-xLB" firstAttribute="trailing" secondItem="bfZ-ga-bUU" secondAttribute="trailing" constant="44" id="z7w-Xr-MWg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="t5g-WQ-prP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="srk-ZC-HdE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="846"/>
+            <point key="canvasLocation" x="121.73913043478262" y="845.75892857142856"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m9t-LY-oJ3">
@@ -245,9 +279,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="GitHub-Mark-120px-plus" width="120" height="120"/>
         <image name="bell.fill" catalog="system" width="128" height="124"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="person" catalog="system" width="128" height="117"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -17,9 +17,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var developerView: UIView!
     
+    
     var viewModel: HomeVM = HomeVM()
     var sideMenu = false
     var webService = AlamofireWebservice()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,8 +93,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func developerButton(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "developerSegue", sender: nil)
+       
+        //self.performSegue(withIdentifier: "developerSegue", sender: nil)
+        developer()
     }
     
     func sidemenuAction(){
@@ -114,8 +117,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         sideMenu = !sideMenu
     }
-
-    
+    @objc func developer(){
+        let developerVC = storyboard?.instantiateViewController(withIdentifier: "DeveloperVC") as! DeveloperVc
+        
+        self.navigationController?.pushViewController(developerVC, animated: true)
+    }
 }
     
 
