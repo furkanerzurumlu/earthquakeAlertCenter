@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailVC-->
+        <scene sceneID="t2U-as-gcG">
+            <objects>
+                <viewController storyboardIdentifier="DetailVC" id="O22-GT-q12" customClass="DetailVC" customModule="earthquakeAlertCenter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5O7-GO-IE3" customClass="detailVC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iBm-61-58v">
+                                <rect key="frame" x="0.0" y="44" width="414" height="578"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pJJ-Ut-Ic1" customClass="detailView" customModule="earthquakeAlertCenter" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="622" width="414" height="274"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="274" id="mzJ-u7-oM1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lIA-OV-YJO"/>
+                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <constraints>
+                            <constraint firstItem="iBm-61-58v" firstAttribute="top" secondItem="lIA-OV-YJO" secondAttribute="top" id="6sV-4H-dml"/>
+                            <constraint firstAttribute="bottom" secondItem="pJJ-Ut-Ic1" secondAttribute="bottom" id="9vZ-qp-gRD"/>
+                            <constraint firstItem="pJJ-Ut-Ic1" firstAttribute="top" secondItem="iBm-61-58v" secondAttribute="bottom" id="LXE-tE-B7a"/>
+                            <constraint firstItem="pJJ-Ut-Ic1" firstAttribute="leading" secondItem="lIA-OV-YJO" secondAttribute="leading" id="UKx-ld-zJM"/>
+                            <constraint firstItem="lIA-OV-YJO" firstAttribute="trailing" secondItem="pJJ-Ut-Ic1" secondAttribute="trailing" id="ewu-oP-egf"/>
+                            <constraint firstItem="iBm-61-58v" firstAttribute="leading" secondItem="lIA-OV-YJO" secondAttribute="leading" id="g8U-nb-otR"/>
+                            <constraint firstItem="lIA-OV-YJO" firstAttribute="trailing" secondItem="iBm-61-58v" secondAttribute="trailing" id="vHe-38-JCs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="DrC-LG-ZdH"/>
+                    <connections>
+                        <outlet property="detailView" destination="pJJ-Ut-Ic1" id="unA-nY-vAY"/>
+                        <outlet property="mapView" destination="iBm-61-58v" id="hwo-TG-EMe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L8u-Wa-ort" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905.7971014492755" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

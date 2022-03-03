@@ -75,7 +75,7 @@ class detailView : BaseView {
         
         southLabel.text = String(detail.longitude) + " E"
         
-        //mdDetailLabel.text = String(detail.md)
+        mdDetailLabel.text = detail.md
         
         mlLabel.text = String(detail.ml)
     }

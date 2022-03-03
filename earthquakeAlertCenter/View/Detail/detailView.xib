@@ -15,6 +15,7 @@
                 <outlet property="detailLabel" destination="YLo-7A-BYX" id="GHM-Sw-8Wp"/>
                 <outlet property="distanceLabel" destination="qiR-83-bR1" id="5AD-R7-GZw"/>
                 <outlet property="locationLabel" destination="9nR-hR-0gZ" id="S6w-f3-klu"/>
+                <outlet property="mdDetailLabel" destination="TiQ-d0-JR6" id="eOa-9H-4EM"/>
                 <outlet property="mdLabel" destination="elg-zs-zrL" id="e1W-wZ-aWF"/>
                 <outlet property="mdView" destination="xUR-ir-aMk" id="Rsy-XZ-rLs"/>
                 <outlet property="mdcolorView" destination="lxp-dU-PJH" id="Lyc-WT-oMH"/>

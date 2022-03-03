@@ -24,6 +24,8 @@
 		DC8EA0032703ABD4002CCA86 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8EA0022703ABD4002CCA86 /* BaseView.swift */; };
 		DC8EA0052714BC01002CCA86 /* HomeVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8EA0042714BC01002CCA86 /* HomeVM.swift */; };
 		DC8EA0082714C250002CCA86 /* CALayer+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8EA0072714C250002CCA86 /* CALayer+Extension.swift */; };
+		DCCF760B27C2850400CB10D5 /* UIViewController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCF760A27C2850400CB10D5 /* UIViewController-Extension.swift */; };
+		DCCF760D27C2911200CB10D5 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCF760C27C2911200CB10D5 /* Detail.storyboard */; };
 		DCD6259326EF94B300684C3F /* detailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCD6259226EF94B300684C3F /* detailView.xib */; };
 		DCD6259526EF953C00684C3F /* detailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD6259426EF953C00684C3F /* detailView.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +52,8 @@
 		DC8EA0022703ABD4002CCA86 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
 		DC8EA0042714BC01002CCA86 /* HomeVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVM.swift; sourceTree = "<group>"; };
 		DC8EA0072714C250002CCA86 /* CALayer+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Extension.swift"; sourceTree = "<group>"; };
+		DCCF760A27C2850400CB10D5 /* UIViewController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController-Extension.swift"; sourceTree = "<group>"; };
+		DCCF760C27C2911200CB10D5 /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		DCD6259226EF94B300684C3F /* detailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = detailView.xib; sourceTree = "<group>"; };
 		DCD6259426EF953C00684C3F /* detailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -147,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8EA0072714C250002CCA86 /* CALayer+Extension.swift */,
+				DCCF760A27C2850400CB10D5 /* UIViewController-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				DC8A96192735DC3500DAF395 /* DeveloperVc.swift */,
+				DCCF760C27C2911200CB10D5 /* Detail.storyboard */,
 				DC1AF56826EF9F9200E64CE7 /* DetailVC.swift */,
 				DCD6259226EF94B300684C3F /* detailView.xib */,
 				DCD6259426EF953C00684C3F /* detailView.swift */,
@@ -255,6 +261,7 @@
 				DC4C066B26D6BDAF00BCA56C /* customCell.xib in Resources */,
 				DC0F114E26D4029D003B6303 /* Main.storyboard in Resources */,
 				DCD6259326EF94B300684C3F /* detailView.xib in Resources */,
+				DCCF760D27C2911200CB10D5 /* Detail.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,6 +322,7 @@
 				DC69E70E26D65080009C83FB /* AlamofireWebservice.swift in Sources */,
 				DC1AF56926EF9F9200E64CE7 /* DetailVC.swift in Sources */,
 				DC69E71126D650E5009C83FB /* EarthquakeViewModel.swift in Sources */,
+				DCCF760B27C2850400CB10D5 /* UIViewController-Extension.swift in Sources */,
 				DC8EA0032703ABD4002CCA86 /* BaseView.swift in Sources */,
 				DC4C066726D6BD2D00BCA56C /* Earthquake.swift in Sources */,
 				DC8A961A2735DC3500DAF395 /* DeveloperVc.swift in Sources */,

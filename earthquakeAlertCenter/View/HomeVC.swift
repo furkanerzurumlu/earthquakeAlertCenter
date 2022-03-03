@@ -78,13 +78,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }*/
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let data = webService.response?.data[indexPath.row]
-        viewModel.sendData = data
-        self.performSegue(withIdentifier: "detailSegue", sender: self)
-        //self.navigationController?.pushViewController(DetailVC, animated: true)
-    }
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detailVC = segue.destination as! DetailVC
-        detailVC.mainData = viewModel.sendData
+        let viewController = DetailVC.instantiate(storyboard: .detail, bundle: nil, identifier: nil)
+        viewController.mainData = data
+        
+       // self.performSegue(withIdentifier: "detailSegue", sender: self)
+    self.navigationController?.pushViewController(viewController, animated: true)
     }
     
     
@@ -118,7 +116,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         sideMenu = !sideMenu
     }
     @objc func developer(){
-        let developerVC = storyboard?.instantiateViewController(withIdentifier: "DeveloperVC") as! DeveloperVc
+        let developerVC = DeveloperVc.instantiate(storyboard: .main, bundle: nil, identifier: nil)
         
         self.navigationController?.pushViewController(developerVC, animated: true)
     }
